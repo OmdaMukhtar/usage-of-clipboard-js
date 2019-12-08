@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1>
+      ClipboardJS كيفية استخدام مكتبة
+    </h1>
+
+    <input
+      type="text"
+      id="myinput"
+      placeholder="قم بكتابة نص هنا"
+      focus
+    /><br />
+
+    <hr />
+    <button data-clipboard-target="#myinput" onclick="copyData()">نسخ</button
+    ><br />
+
+    <hr />
+    <textarea cols="30" rows="10"></textarea>
+
+    <!-- js files -->
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+
+    <script>
+      function copyData() {
+        var button = document.querySelector("button");
+
+        var clipboard = new ClipboardJS(button);
+        console.log("this = ", cl);
+        // }
+      }
+    </script>
+  </body>
+
+  <style>
+    hr {
+      border: 0px;
+    }
+  </style>
+</html>
